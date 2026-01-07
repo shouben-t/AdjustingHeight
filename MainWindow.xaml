@@ -1,0 +1,30 @@
+﻿<Window x:Class="AdjustHeightHybridBlazorWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdjustHeightHybridBlazorWpf"
+        xmlns:wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        xmlns:wpf1="http://schemas.microsoft.com/winfx/2006/xaml/presentation/blazor"
+        xmlns:counter="clr-namespace:AdjustHeightHybridBlazorWpf.Components"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!--<wpf:WebView2 Name="webView"
+                      Source="https://www.microsoft.com"
+                      Height="500"
+                      Margin="0 50 0 0"
+        />-->
+        <!--<wpf1:BlazorWebView HostPage="wwwroot\index.html" Services="{DynamicResource services}" Name="webView" Height="500" Margin="0 50 0 0">
+            <wpf1:BlazorWebView.RootComponents>
+                <wpf1:RootComponent Selector="#app" ComponentType="{x:Type counter:Counter}" />
+            </wpf1:BlazorWebView.RootComponents>
+        </wpf1:BlazorWebView>-->
+        <wpf:WebView2CompositionControl
+            Name="webView"
+            Source="https://www.microsoft.com"
+            Height="500"
+            Margin="0 50 0 0"/>
+<Button Height="50" Width="150" Click="ButtonBase_OnClick" VerticalAlignment="Top">Move</Button>
+    </Grid>
+</Window>
